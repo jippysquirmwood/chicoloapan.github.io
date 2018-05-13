@@ -4,6 +4,11 @@
 /*cual escogemos*/
 body {
     background-image: url("images/img_218.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+
 }
 
 * {box-sizing: border-box}
