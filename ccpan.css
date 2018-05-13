@@ -1,0 +1,46 @@
+/*Write your CSS in here*/
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
+
+/*cual escogemos*/
+body {
+    background-image: url("images/img_218.jpg");
+}
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-bottom: 2px solid black;
+}
+
+button:hover {
+	transition: 0.3s;
+	background-color: #2E1263;
+	color: #F69680;
+	text-decoration: underline; 
+}
+
+#container {
+	margin: 190px;
+	margin-left: 400px;
+	display:center;
+	align-items: center;
+	justify-content: center;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+form {background-color:white;
+	width: 80%;
+	padding: 30px;
+}
+
+    
