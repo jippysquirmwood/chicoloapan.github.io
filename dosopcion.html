@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body, html {
+    height: 100%;
+    font-family: Lato;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("images/img_203.jpg");
+
+    min-height: 950px;
+
+    /* Center and scale the image nicely */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    margin: 60px;
+    padding: 16px;
+    height: 475px;
+    width: 35%;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #66b3ff;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="bg-img">
+  <form action="/action_page.php">
+    <div class="container">
+      <img src="images/img_208.jpg" alt="Logo" width="50" height="50" align="left"> <h2>Chicoloapan</h2>
+      <h1>Login</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:3px"> Remember me
+      </label>
+      <p> No account? <a href="file:///Users/VeroRReid/Downloads/Crash_Course_Starter_Code/mi%20gato.html">Create one! </a> </p>
+    <br>
+      <button type="submit" class="btn">Next</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+
