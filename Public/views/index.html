@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chicoloapan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+</head>
+<body>
+    <h1>Welcome to METHOD stuffs</h1>
+    <nav>nav</nav>
+    <aside>aside</aside>
+    <main>main</main>
+    <div class="message translate-up-200">
+        <% if(message){ %> <!--note this is a variable passed into 'res.render' in the public-router -->
+            <%= message %>
+        <% } %> 
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="/views/components/daily-message.js"></script>
+</body>
+</html>
