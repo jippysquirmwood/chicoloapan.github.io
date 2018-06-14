@@ -67,34 +67,29 @@ aside{
 
 /* Navigation Bar Style*/
 
-/* Add a black background color to the top navigation */
-.topnav {
-    font-family: 'Lato';
-    background-color: #333;
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: #333;
+  }
+
+li {
+    display: inline;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    font-family: 'Lato';
-    float: left;
-    color: #f2f2f2;
+li a {
+    display: block;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    font-family: 'Lato';
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    font-family: 'Lato';
-    background-color: #4CAF50;
-    color: white;
+li a:hover {
+    background-color: #ff9999;
 }
