@@ -70,7 +70,11 @@ aside{
 
 /* Navigation Bar Style*/
 
-
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 
 
