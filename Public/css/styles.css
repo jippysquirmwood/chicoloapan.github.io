@@ -81,9 +81,10 @@ aside{
     background-color: #333;
 }
 
-  .topnav li {
+ /* .topnav li {
     display: inline;
 }
+*/
 
 .topnav li a {
     display: block;
