@@ -79,7 +79,7 @@ ul {
 }
 
 li {
-    float: right;
+    display: inline;
 }
 
 li a {
