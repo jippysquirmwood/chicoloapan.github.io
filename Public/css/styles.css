@@ -70,7 +70,7 @@ aside{
 
 /* Navigation Bar Style*/
 
-.topnav ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -78,11 +78,11 @@ aside{
     background-color: #333;
 }
 
-.topnav li {
+li {
     float: left;
 }
 
-.topnav li a {
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -91,7 +91,7 @@ aside{
 }
 
 /* Change the link color to #111 (black) on hover */
-.topnav li a:hover {
+li a:hover {
     background-color: #111;
 }
 
