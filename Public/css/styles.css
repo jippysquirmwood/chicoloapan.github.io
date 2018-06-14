@@ -70,6 +70,12 @@ aside{
 
 /* Navigation Bar Style*/
 
+
+
+
+
+
+/*
 .topnav ul {
     position: fixed;
     top: 0;
@@ -81,10 +87,9 @@ aside{
     background-color: #333;
 }
 
- /* .topnav li {
+.topnav li {
     display: inline;
 }
-*/
 
 .topnav li a {
     display: block;
@@ -97,3 +102,5 @@ aside{
 .topnav li a:hover {
     background-color: #ff9999;
 }
+
+*/
