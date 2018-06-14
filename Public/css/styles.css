@@ -71,6 +71,7 @@ aside{
 
 /* Navigation Bar Style*/
 ul {
+    font-family: 'Lato';
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -79,10 +80,12 @@ ul {
 }
 
 li {
+    font-family: 'Lato';
     float: left;
 }
 
 li a {
+    font-family: 'Lato';
     display: block;
     color: white;
     text-align: center;
@@ -91,5 +94,6 @@ li a {
 }
 
 li a:hover {
+    font-family: 'Lato';
     background-color: #111;
 }
