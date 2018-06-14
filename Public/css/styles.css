@@ -1,6 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
-
+/*
 html, body{
     font-family: 'Lato';
     width: 100vw;
@@ -67,6 +67,7 @@ aside{
     font-family: 'Lato';
     transform: translateY(-300px);
 }
+*/
 
 /* Navigation Bar Style*/
 ul {
@@ -92,33 +93,3 @@ li a {
 li a:hover {
     background-color: #111;
 }
-
-/*
-.topnav ul {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav li {
-    display: inline;
-}
-
-.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.topnav li a:hover {
-    background-color: #ff9999;
-}
-
-*/
