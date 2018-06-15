@@ -107,3 +107,7 @@ input[type=text] {
     margin-right: 16px;
     font-size: 17px;
 }
+
+img { 
+    float: right;
+}
