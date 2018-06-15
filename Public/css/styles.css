@@ -110,4 +110,7 @@ input[type=text] {
 
 img { 
     float: right;
+    width:42px;
+    height:42px;
+    border:0;
 }
