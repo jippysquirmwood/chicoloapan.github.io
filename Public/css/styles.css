@@ -1,73 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
-/*
-html, body{
-    font-family: 'Lato';
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Lato';
-    display: grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: 100px auto;
-    position: relative;
-} 
 
-h1 {
-    font-family: 'Lato'
-}
-nav{
-    font-family: 'Lato';
-    background-color: #faa3;
-    grid-column: 1/-1;
-    grid-row: 1/span 1;
-    display: grid;
-
-}
-main{
-    font-family: 'Lato';
-    background-color: #afa3;
-    grid-column: 2/-1;
-    grid-row: 2/span 1;
-    display: grid;
-}
-aside{
-    font-family: 'Lato';
-    background-color: #aaf3;
-    grid-column: 1/ span 1;
-    grid-row: 2/span 1;
-}
-
-.message{
-    font-family: 'Lato';
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    padding: 20px;
-    margin-top: 50px;
-    min-height: 30px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 1px 1px #0009;
-    background-color: #0009;
-    color: #fff;
-    transition: 1s ease-in-out;
-}
-.message:hover{
-    font-family: 'Lato';
-    background-color: #0099;
-}
-.translate-up-200{
-    font-family: 'Lato';
-    transform: translateY(-300px);
-}
-*/
 
 /* Navigation Bar Style*/
 ul {
@@ -77,6 +10,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    height: 300px;
 }
 
 li {
@@ -110,4 +44,7 @@ input[type=text] {
 
 img { 
     float: right;
+    width:42px;
+    height:42px;
+    border:0;
 }
