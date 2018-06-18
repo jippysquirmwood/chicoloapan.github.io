@@ -12,7 +12,7 @@ body {
 header {
 	width: 100%;
 	overflow:hidden;
-	background: rgb(210,223,237); /* viejos browsers */
+	background: rgb(210,223,237);
 	background: #66ccff;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=1 ); /* IE6-9 */
 	margin-bottom: 20px;
