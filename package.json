@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "http": "0.0.0"
+  },
   "devDependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
@@ -21,7 +23,8 @@
     "passport-facebook": "^2.1.1",
     "passport-google": "^0.3.0",
     "passport-local": "^1.0.0",
-    "passport-twitter": "^1.0.4"
+    "passport-twitter": "^1.0.4",
+    "socket.io": "^2.1.1"
   },
   "scripts": {
     "test": "test",

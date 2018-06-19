@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 const path = require('path'); //concatenates paths using the correct encoding on different systems (unix, linux, win etc)
 const mongoConfig = require(path.join(process.cwd(),'server','config','mongo.config.js'));
 const Database = require(path.join(process.cwd(),'server','db.js'));
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 let db = new Database(
     mongoose,
     mongoConfig.uri(process.env.DB_USER, process.env.DB_PWD, process.env.DB_HOST,process.env.DB_PORT, process.env.DB_NAME, process.env.DB_AUTH_SOURCE), 
@@ -55,9 +58,30 @@ app.use('/', require(path.join(process.cwd(),'server','routers','public-router.j
 //Note this needs to be replaced with better error handling as this will only handle page request errors and not yet server errors
 app.use('/*',require(path.join(process.cwd(),'server','routers','error-router.js'))); //handle any
 
+let count = 0;
+//setup websocket
+io.on('connection', function (socket) {
+    count++
+    console.log(count + " users connected.")
+    io.emit('news', { msg: 'One more person is online', count: count })
+    socket.emit('private', { msg: 'Welcome you are the ' + count + ' person here' })
+
+    socket.on('private', function (data) {
+        console.log(data);
+    })
+
+    socket.on('disconnect', function() {
+        count--
+        io.emit('news', { msg: 'Someone went home', count: count })
+    })
+    socket.on('chat message', (msg)=>{
+        console.log('message: ' + msg);
+        io.emit('chat message', msg);
+    })
+});
 
 
 //start server
-app.listen(app.get('PORT'), ()=>{
+http.listen(app.get('PORT'), ()=>{
     console.log('Listening on port ' + app.get('PORT'));
 })

@@ -6,19 +6,24 @@
     <title>Chicoloapan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/messenger.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to METHOD stuffs</h1>
     <nav>nav</nav>
     <aside>aside</aside>
     <main>main</main>
+
     <div class="message translate-up-200">
         <% if(message){ %> <!--note this is a variable passed into 'res.render' in the public-router -->
             <%= message %>
         <% } %> 
     </div>
-
-    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script src="js/events.js"></script>
     <script src="/views/components/daily-message.js"></script>
+    <script src="/js/components/component.js"></script>
+    <script src="/js/components/messenger.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
