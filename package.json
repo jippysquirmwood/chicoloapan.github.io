@@ -1,0 +1,47 @@
+{
+  "name": "chicoloapan",
+  "version": "1.0.0",
+  "description": "method statement suite",
+  "main": "./Server/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "espress": "0.0.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.1.4",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4"
+  },
+  "scripts": {
+    "test": "test",
+    "start_mongod": "start mongod --dbpath ./server/data/mongo --auth",
+    "start_server": "nodemon server.js",
+    "start": "npm run start_mongod & npm run start_server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jippysquirmwood/chicoloapan.github.io.git"
+  },
+  "keywords": [
+    "Awesome",
+    "Method",
+    "Statements"
+  ],
+  "author": "Jonothan Reid, Veronica Reid, David..., Russ Elfenbein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jippysquirmwood/chicoloapan.github.io/issues"
+  },
+  "homepage": "https://github.com/jippysquirmwood/chicoloapan.github.io#readme"
+}
