@@ -1,0 +1,26 @@
+.messenger-wrapper{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.messenger-edit-text{
+    width: 100%;
+    height: 20px;
+}
+.messenger-output{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 8px;
+    overflow-y: auto;
+}
+.messenger-submit{
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    margin-bottom: 8px;
+}
