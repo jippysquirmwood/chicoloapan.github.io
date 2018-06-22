@@ -1,5 +1,5 @@
 .wpp-wrapper{
-    width: 260px;
+    will-change: transform;
     padding: 8px;
     margin-top: 16px;
 }
@@ -8,13 +8,17 @@
 }
 .wpp-title-container{
     position: relative;
-    width: 100%;
+    width: 260px;
     height: 150px;
     box-shadow: 3px 3px 6px 1px #3339;
     background-color: #fff;
     padding: 8px;
     border-radius: 3px;
     border-left: 2px solid black;
+    cursor: pointer;
+}
+.wpp-title-container:hover{
+    background-color: #ddd;
 }
 .wpp-title{
     width: 100%;
@@ -32,10 +36,15 @@
     background-color: #fff;
     padding: 8px;
     border-radius: 3px;
-    margin-bottom: 10px;
+    margin-top: -28px;
+    position: relative;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+.tbs-list-item:hover{
+    background-color: #ddd;
 }
 .tbs-wrapper{
-    position: relative;
     position: relative;
     width: 220px;
 }
@@ -58,18 +67,22 @@
     text-transform: uppercase;
     font-size: 0.6em;
     font-weight: bold;
+    cursor: pointer;
+}
+.status:hover{
+    background-color: #ddd;
 }
 .tbs.docnumber{
 
 }
 .tbs-line{
     width: 20px;
-    height: 71px;
+    height: 130px;
     position: absolute;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     left: -48px;
-    top: -60px;
+    top: -120px;
 }
 
 .approved{
@@ -83,4 +96,22 @@
 .comment{
     border-color: red;
     color: red;
+}
+
+.wpp-wrapper:hover .tbs-expand{
+    margin-top:0;
+    margin-bottom: 10px;
+}
+.tbs-button-expand{
+    position: absolute;
+    transform: translate(-39px, -30px);
+    border: 1px solid black;
+    font-weight: bold;
+    width: 21px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.tbs-button-expand:hover{
+    background-color: #3339;
 }

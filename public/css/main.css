@@ -1,6 +1,16 @@
 main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 350px;
     grid-gap: 8px;
     grid-template-rows: auto;
+}
+@media screen and (min-width: 800px){
+    main{
+        grid-template-columns: repeat(2, 370px);
+    }
+}
+@media screen and (min-width: 1200px){
+    main{
+        grid-template-columns: repeat(3, 370px);
+    }
 }
