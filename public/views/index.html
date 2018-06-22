@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chicoloapan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/messenger.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/messenger.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/wpp.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav>nav</nav>
     <aside>aside</aside>
-    <main>main</main>
+    <main></main>
 
     <div class="message translate-up-200">
         <% if(message){ %> <!--note this is a variable passed into 'res.render' in the public-router -->
@@ -24,6 +26,7 @@
     <script src="/views/components/daily-message.js"></script>
     <script src="/js/components/component.js"></script>
     <script src="/js/components/messenger.js"></script>
+    <script src="/js/components/wpp.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
