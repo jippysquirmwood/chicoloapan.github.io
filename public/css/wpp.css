@@ -1,6 +1,5 @@
 .wpp-wrapper{
     will-change: transform;
-    width: 260px;
     padding: 8px;
     margin-top: 16px;
 }
@@ -9,7 +8,7 @@
 }
 .wpp-title-container{
     position: relative;
-    width: 100%;
+    width: 260px;
     height: 150px;
     box-shadow: 3px 3px 6px 1px #3339;
     background-color: #fff;
@@ -78,12 +77,12 @@
 }
 .tbs-line{
     width: 20px;
-    height: 71px;
+    height: 130px;
     position: absolute;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     left: -48px;
-    top: -60px;
+    top: -120px;
 }
 
 .approved{
