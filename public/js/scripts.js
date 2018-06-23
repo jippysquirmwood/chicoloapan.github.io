@@ -1,4 +1,17 @@
 (function(){
+
+    //get profile pic
+    promiseAjaxRequest('GET', '/auth/profile', {}).then((data)=>{
+        console.log('test')
+        if(data.success){
+            document.querySelector('.user-profile-pic').src = data.imgSource;
+            document.querySelector('.welcome-message').textContent = "Welcome back, " +  data.user.google.name;
+        }
+    }).catch(data=>{
+        console.log(data)
+    })
+
+
     let socket = io();
     function submitMessage(msg){
         socket.emit('chat message', msg);

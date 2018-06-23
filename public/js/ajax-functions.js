@@ -86,6 +86,7 @@ function promiseAjaxRequest(method, url, postData){
                 url, 
                 function(data){
                   var parsed = null;
+                  console.log(data)
                   try {
                       parsed = JSON.parse(data);
                   } catch (e){
@@ -98,7 +99,7 @@ function promiseAjaxRequest(method, url, postData){
           );    
     })
     .catch(function(result){
-        console.log('rejected')
+        console.log('rejected', result)
         return result;
     });
   

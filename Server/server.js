@@ -8,13 +8,19 @@ const bodyParser = require('body-parser');
 const path = require('path'); //concatenates paths using the correct encoding on different systems (unix, linux, win etc)
 const mongoConfig = require(path.join(process.cwd(),'server','config','mongo.config.js'));
 const Database = require(path.join(process.cwd(),'server','db.js'));
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const http = require('http');
+const httpServer = http.Server(app);
+const io = require('socket.io')(httpServer);
+const passport = require('passport'); 
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 let db = new Database(
     mongoose,
     mongoConfig.uri(process.env.DB_USER, process.env.DB_PWD, process.env.DB_HOST,process.env.DB_PORT, process.env.DB_NAME, process.env.DB_AUTH_SOURCE), 
     mongoConfig.options);
+
+require('./passport/google-oauth-strategy.js')(passport);
 
 app.set('PORT', process.env.PORT || 8080); //http port 8080 usually, if run in some IDes they will put the requred port into process.env.PORT
 
@@ -30,17 +36,15 @@ app.use(bodyParser.json({
     limit: '50mb' // so we can send stuff to the server up to this limit.
 })); 
 
-
-//not yet required
 //Authentication
-// app.use(cookieParser());
-// app.use(session({
-//     secret: config.session.secret,
-//     resave:true,
-//     saveUninitialized: true
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave:true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 //this directts the server to look for static files (js, css, images etc) in the public/static directory
@@ -49,7 +53,7 @@ app.use('/',express.static(path.join(process.cwd(), 'public')));
 
 //Register routers to use
 //Authenticated Routes ----- havent set up authentication yet, so this will not require authentication at this stage
-app.use('/authenticated', /*isLoggedIn,*/ require('./routers/authenticated-router.js'));//(passport, models)); <-- we will pass variables into this route when it is requied
+app.use('/auth', /*isLoggedIn,*/ require('./routers/authenticated-router.js')(express,passport, http));//(passport, models)); <-- we will pass variables into this route when it is requied
 
 //Public routes
 app.use('/', require(path.join(process.cwd(),'server','routers','public-router.js'))); //(passport, db, models));   <-- we will pass variables into this route when it is requied
@@ -70,6 +74,8 @@ io.on('connection', function (socket) {
         console.log(data);
     })
 
+
+
     socket.on('disconnect', function() {
         count--
         io.emit('news', { msg: 'Someone went home', count: count })
@@ -82,6 +88,6 @@ io.on('connection', function (socket) {
 
 
 //start server
-http.listen(app.get('PORT'), ()=>{
+httpServer.listen(app.get('PORT'), ()=>{
     console.log('Listening on port ' + app.get('PORT'));
 })
