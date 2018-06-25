@@ -83,7 +83,7 @@ main {
 
 
 
-/* efectos del menu */
+/* effects of the menu */
 
 .headroom {
     transition: transform .3s ease;
@@ -95,11 +95,9 @@ main {
 
 .headroom--unpinned {
     transform: translateY(-100%);
-    /* aqui se puedem poner mucho mas afectos */
-    /*background: #4353ad;*/
+   /*background: #4353ad;*/
 }
 
-/* mediaqueries */
 @media screen and (max-width: 500px) {
     header .menu {
         flex-direction:column;
@@ -125,22 +123,4 @@ main {
         justify-content: space-around;
     }
 
-}
-
-
-/* secciones de ejemplo despues se modificarean */
-
-section {
-    width: 900px;
-    margin: 80px auto 0px;
-    overflow: hidden;
-    background: rgb(105, 102, 102);
-}
-
-section article {
-    float: left;
-    width: calc(33.333% - 30px);
-    margin: 15px;    
-    height: 350px;
-    background: rgb(243, 240, 240);
 }
