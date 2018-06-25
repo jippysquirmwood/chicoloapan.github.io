@@ -3,27 +3,21 @@
 
 /*nav*/
 $(function(){
-    /// la funcion esta pritegida por que es autoinvocada///
-    
         var header = document.getElementById('header');
         var headroom = new Headroom(header);
-    /// con init se inicializo la variable que hasta este punto no se ve que afecte pero ya nombro el header y el haedroom ///    
         headroom.init();
-    
-    /// menu responsive ///
-    /// calculo del ancho de la pag ///
         var ancho = $(window).width(),
-            enlaces = $('#enlaces'),
+            links = $('#links'),
             btnMenu = $('#btn-menu'),
             icono = $('#btn-menu .icono');
         
             if(ancho < 500){
-                enlaces.hide();
+                links.hide();
                 icono.addClass('fa-bars');
             }
     
             btnMenu.on('click', function(e){
-                enlaces.slideToggle();
+                links.slideToggle();
                 icono.toggleClass('fa-bars');
                 icono.toggleClass('fa-times');
                 }
@@ -31,11 +25,11 @@ $(function(){
     //se ejecuta cada vez que se detecta un cambio de tammaño de pantalla //
             $(window).on('resize', function(){
                 if($(this).width() > 500){
-                    enlaces.show();
+                    links.show();
                     icono.addClass('fa-times');
                     icono.removeClass('fa-bars');
                 } else {
-                    enlaces.hide();
+                    links.hide();
                     icono.addClass('fa-bars');
                     icono.removeClass('fa-times');
                 }

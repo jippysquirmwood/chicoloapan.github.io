@@ -50,12 +50,12 @@ margin-right: 0.5em;
     background: #3B373F;
 }
 
-.menu .enlaces {
+.menu .links {
     display: inline-block;
     text-align: right;
 }
 
-.menu .enlaces a {
+.menu .links a {
     color: #eee;
     text-decoration: none;
     display: inline-block;
@@ -64,11 +64,11 @@ margin-right: 0.5em;
     font: 0.5em;    
 }
 
-.menu .enlaces i {
+.menu .links i {
     margin-right: 5px;
 }
 
-.menu .enlaces a:hover {
+.menu .links a:hover {
     color: #4353ad;
 }
 
@@ -117,7 +117,7 @@ main {
         display: inline-block;
     }
 
-    header .menu .enlaces {
+    header .menu .links {
         width: 100%;
         display: flex;
         flex-direction: row;
