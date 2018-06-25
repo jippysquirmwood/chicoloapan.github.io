@@ -6,32 +6,32 @@ $(function(){
         var header = document.getElementById('header');
         var headroom = new Headroom(header);
         headroom.init();
-        var ancho = $(window).width(),
+        var width = $(window).width(),
             links = $('#links'),
             btnMenu = $('#btn-menu'),
-            icono = $('#btn-menu .icono');
+            icon = $('#btn-menu .icon');
         
-            if(ancho < 500){
+            if(width < 500){
                 links.hide();
-                icono.addClass('fa-bars');
+                icon.addClass('fa-bars');
             }
     
             btnMenu.on('click', function(e){
                 links.slideToggle();
-                icono.toggleClass('fa-bars');
-                icono.toggleClass('fa-times');
+                icon.toggleClass('fa-bars');
+                icon.toggleClass('fa-times');
                 }
             );
     //se ejecuta cada vez que se detecta un cambio de tammaño de pantalla //
             $(window).on('resize', function(){
                 if($(this).width() > 500){
                     links.show();
-                    icono.addClass('fa-times');
-                    icono.removeClass('fa-bars');
+                    icon.addClass('fa-times');
+                    icon.removeClass('fa-bars');
                 } else {
                     links.hide();
-                    icono.addClass('fa-bars');
-                    icono.removeClass('fa-times');
+                    icon.addClass('fa-bars');
+                    icon.removeClass('fa-times');
                 }
        
             });
