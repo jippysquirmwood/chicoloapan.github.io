@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background: #eee;
+    padding-top: 55px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    /*height: 40px;*/
+    background: #3B373F;
+    width: 100%;
+}
+
+.menu {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.menu .logo {
+display: inline-block;
+margin-right: 0.5em;
+}
+
+.menu .logo img {
+    vertical-align: top;
+    height: 22px;
+}
+
+.menu .btn-menu{
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.menu .logo:hover {
+    background: #3B373F;
+}
+
+.menu .enlaces {
+    display: inline-block;
+    text-align: right;
+}
+
+.menu .enlaces a {
+    color: #eee;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    text-align: center;
+    font: 0.5em;    
+}
+
+.menu .enlaces i {
+    margin-right: 5px;
+}
+
+.menu .enlaces a:hover {
+    color: #4353ad;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+}
+
+
+
+/* efectos del menu */
+
+.headroom {
+    transition: transform .3s ease;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+    /* aqui se puedem poner mucho mas afectos */
+    /*background: #4353ad;*/
+}
+
+/* mediaqueries */
+@media screen and (max-width: 500px) {
+    header .menu {
+        flex-direction:column;
+    }
+
+    header .menu .logo{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    header .menu .logo .btn-menu {
+        display: inline-block;
+    }
+
+    header .menu .enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+
+/* secciones de ejemplo despues se modificarean */
+
+section {
+    width: 900px;
+    margin: 80px auto 0px;
+    overflow: hidden;
+    background: rgb(105, 102, 102);
+}
+
+section article {
+    float: left;
+    width: calc(33.333% - 30px);
+    margin: 15px;    
+    height: 350px;
+    background: rgb(243, 240, 240);
+}
