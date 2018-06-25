@@ -18,19 +18,19 @@ $(function(){
             btnMenu.on('click', function(e){
                 links.slideToggle();
                 icon.toggleClass('fa-bars');
-                icon.toggleClass('fa-times');
+                icon.toggleClass('&#xf107'); 
                 }
             );
     
             $(window).on('resize', function(){
                 if($(this).width() > 500){
                     links.show();
-                    icon.addClass('fa-times');
+                    icon.addClass('&#xf107');
                     icon.removeClass('fa-bars');
                 } else {
                     links.hide();
                     icon.addClass('fa-bars');
-                    icon.removeClass('fa-times');
+                    icon.removeClass('&#xf107');
                 }
        
             });
