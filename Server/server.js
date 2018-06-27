@@ -1,4 +1,4 @@
-const secrets = require('dotenv').config({path: process.cwd()+'/server/secrets/.env'}); //read out secret stuff not to be shared on github
+const secrets = require('dotenv').config({path: process.cwd()+'/server/.env'}); //read out secret stuff not to be shared on github
 const express = require('express'); //an express server
 const app = express(); //initialize server
 const logger = require('morgan'); //server request logging
@@ -17,7 +17,13 @@ const session = require('express-session');
 
 let db = new Database(
     mongoose,
-    mongoConfig.uri(process.env.DB_USER, process.env.DB_PWD, process.env.DB_HOST,process.env.DB_PORT, process.env.DB_NAME, process.env.DB_AUTH_SOURCE), 
+    mongoConfig.uri(
+        process.env.DB_USER, 
+        process.env.DB_PWD, 
+        process.env.DB_HOST,
+        process.env.DB_PORT, 
+        process.env.DB_NAME, 
+        process.env.DB_AUTH_SOURCE), 
     mongoConfig.options);
 
 require('./passport/google-oauth-strategy.js')(passport);
