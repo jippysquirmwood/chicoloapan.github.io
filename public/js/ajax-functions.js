@@ -98,7 +98,7 @@ function promiseAjaxRequest(method, url, postData){
           );    
     })
     .catch(function(result){
-        console.log('rejected')
+        console.log('rejected', result)
         return result;
     });
   

@@ -8,11 +8,16 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/messenger.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/wpp.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <nav>nav</nav>
+    <nav>
+        <a href="/auth/google"><button>Google Login</button></a>
+        <a href="/auth/logout"><button>Logout</button></a>
+        <image class="user-profile-pic"></image><p class="welcome-message"></p>
+    </nav>
     <aside>aside</aside>
     <main></main>
 
@@ -23,6 +28,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/ajax-functions.js"></script>
     <script src="/views/components/daily-message.js"></script>
     <script src="/js/components/component.js"></script>
     <script src="/js/components/messenger.js"></script>
