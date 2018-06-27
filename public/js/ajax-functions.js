@@ -86,7 +86,6 @@ function promiseAjaxRequest(method, url, postData){
                 url, 
                 function(data){
                   var parsed = null;
-                  console.log(data)
                   try {
                       parsed = JSON.parse(data);
                   } catch (e){

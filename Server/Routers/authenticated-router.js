@@ -16,6 +16,7 @@ module.exports = function(express,passport, http){
         response.on('data',(chunk)=>data+=chunk);
         response.on('end', ()=>{
           let parsed = JSON.parse(data);
+          console.log(parsed)
           let imgSource = parsed.entry['gphoto$thumbnail']['$t'];
           let name = req.user.google.name;
           console.log('name',req.user.google.name, name)
