@@ -8,15 +8,15 @@ html, body{
 body{
     display: grid;
     grid-template-columns: 40px auto;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 50px auto;
     position: relative;
 } 
 
 nav{
-    background-color: #faa3;
-    grid-column: 1/-1;
-    grid-row: 1/span 1;
-    display: grid;
+    /* background-color: #faa3;*/
+     grid-column: 1/-1;
+    /* grid-row: 1/span 1; */
+    /* display: grid; */
 
 }
 main{
