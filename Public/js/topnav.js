@@ -18,19 +18,19 @@ $(function(){
             btnMenu.on('click', function(e){
                 links.slideToggle();
                 icon.toggleClass('fa-bars');
-                icon.toggleClass('&#xf107'); 
+                icon.toggleClass('fa-angle-double-up'); 
                 }
             );
     
             $(window).on('resize', function(){
                 if($(this).width() > 500){
                     links.show();
-                    icon.addClass('&#xf107');
+                    icon.addClass('fa-angle-double-up');
                     icon.removeClass('fa-bars');
                 } else {
                     links.hide();
                     icon.addClass('fa-bars');
-                    icon.removeClass('&#xf107');
+                    icon.removeClass('fa-angle-double-up');
                 }
        
             });

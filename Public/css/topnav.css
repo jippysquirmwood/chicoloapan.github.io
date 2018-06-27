@@ -1,127 +1,147 @@
 *{
-	margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
 }
 
-body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    background: #eee;
-    padding-top: 55px;
+.topnav {
+    background-color: #333;
+    overflow: hidden;
 }
 
-header {
-    position: fixed;
-    top: 0px;
-    /*height: 40px;*/
-    background: #3B373F;
-    width: 100%;
-}
-
-.menu {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items: center;
-}
-
-.menu .logo {
-display: inline-block;
-margin-right: 0.5em;
-float: left;
-}
-
-.menu .logo img {
-    vertical-align: top;
-    height: 22px;
-}
-
-.menu .btn-menu{
-    display: none;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.menu .logo:hover {
-    background: #3B373F;
-}
-
-.menu .links {
-    display: inline-block;
-    text-align: right;
-}
-
-.menu .links a {
-    color: #eee;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5em;
+.topnav a {
+    float: right;
+    color: #f2f2f2;
     text-align: center;
-    font: 0.5em;    
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.menu .links i {
-    margin-right: 5px;
+.topnav a:hover {
+    color: rgba(88, 95, 136, 0.986);
 }
 
-.menu .links a:hover {
-    color: #4353ad;
+.topnav a.active {
+    background-color: rgb(76, 83, 175);
+    color: white;
+    float: left;
 }
 
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+/*boton configuracion*/
+.dropbtn {
+    background:none;
+    color: white;
+    padding: 10px 12px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #333;
 }
 
-
-
-/* effects of the menu */
-
-.headroom {
-    transition: transform .3s ease;
+/*.dropdown {
+    position: relative;
+    display: inline-block;
+}
+*/
+.dropdown-content {
+    display: inline-block;
+    position: absolute;
+    background: #333;
+    overflow: auto;
+    width: 100px;
+    box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.headroom--pinned {
-    transform: translateY(0%);
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.headroom--unpinned {
-    transform: translateY(-100%);
-   /*background: #4353ad;*/
+.dropdown-content a:hover {
+    background-color: #ddd
 }
 
-@media screen and (max-width: 500px) {
-    header .menu {
-        flex-direction:column;
+.show {display:block;}
+
+/*boton busqueda*/
+
+
+
+
+
+
+/*.topnav a. box [type=text] {
+    float: right;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+*/
+
+.topnav .search-container {
+    float: right;
+  }
+  
+.topnav input[type=text] {
+    padding: 5px;
+    /*margin: 10px 14px;*/
+    font-size: 15px;
+    border: none;
+  }
+  
+.topnav .search-container button {
+    color: white;
+    /*float: right;*/
+    padding: 5px;
+    padding-top: 4px;
+    /*margin-top: 8px;
+    margin-right: 16px;*/
+    background: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+
+
+.topnav .search-container button:hover {
+    color: rgba(88, 95, 136, 0.986);
+  }
+  
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
     }
-
-    header .menu .logo{
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        width: 100%;
-        padding: 1em;
+    
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
-
-    header .menu .logo .btn-menu {
-        display: inline-block;
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
     }
-
-    header .menu .links {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    .topnav.responsive .search-container {
+        float: none;
+        padding: 5px 6px;
     }
-
-}
+    .topnav.responsive .search-container button {
+        float: left;
+    }
+  }
