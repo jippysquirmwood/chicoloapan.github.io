@@ -1,14 +1,10 @@
 var i=0;
 
 function openNav() {
-    i++;
+    i=1;
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     genericSpan.innerHTML = "hello " + i;
-}
-
-function newFunction() {
-    i = 1;
 }
 
 function closeNav() {
