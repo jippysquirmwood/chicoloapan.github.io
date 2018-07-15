@@ -20,6 +20,7 @@ function closeNav() {
     document.getElementById("closebtn").style.display = "none";
     document.getElementById("fixedbtn").style.display = "none";
     i = 0;
+    document.getElementById("thing").innerHTML="i=0";
 }
 
 function fixedNav(){
@@ -27,6 +28,7 @@ function fixedNav(){
     document.getElementById("closebtn").style.display = "block";
     document.getElementById("fixedbtn").style.display = "none";
     i = 1;
+    document.getElementById("thing").innerHTML="i=1";
 }
 
 
