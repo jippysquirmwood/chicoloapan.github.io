@@ -4,13 +4,13 @@
     //by element
 
     //by class
-        let sidenav = document.getElementsByClassName("sidenav")
-        let closebtn = document.getElementsByClassName("closebtn")
+        var sidenav = document.getElementsByClassName("sidenav")
+        var closebtn = document.getElementsByClassName("closebtn")
 
     //by id
-        let mySidenav = document.getElementById("mySidenav")
-        let main = document.getElementById("main")
-        let genericSpan = document.getElementById("genericSpan")
+        var mySidenav = document.getElementById("mySidenav")
+        var main = document.getElementById("main")
+        var genericSpan = document.getElementById("genericSpan")
 
 
 
