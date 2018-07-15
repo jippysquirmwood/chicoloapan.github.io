@@ -14,13 +14,17 @@
 
 
 
-let j=0
+var i=0;
 
 function openNav() {
-    j=1;
+    i++;
     mySidenav.style.width = "250px";
     main.style.marginLeft = "250px";
-    genericSpan.innerHTML = "hello " + j;
+    genericSpan.innerHTML = "hello " + i;
+}
+
+function newFunction() {
+    j = 1;
 }
 
 function closeNav() {
