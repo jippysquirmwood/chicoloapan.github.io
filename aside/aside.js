@@ -1,9 +1,13 @@
+let j=0
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    j=1;
+    document.getElementById("id span").innerHTML="j value = "&j;
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "20px";
-    document.getElementById("main").style.marginLeft= "20px";
+    document.getElementById("mySidenav").style.width = "30px";
+    document.getElementById("main").style.marginLeft= "30px";
 }
