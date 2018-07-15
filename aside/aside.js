@@ -4,7 +4,7 @@ function openNav() {
     i=1;
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    genericSpan.innerHTML = "hello " + i;
+    genericSpan.innerHTML = "i value = " + i;
 }
 
 function closeNav() {
