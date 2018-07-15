@@ -4,7 +4,7 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 10%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -39,7 +39,6 @@ body {
 #main {
     transition: margin-left .5s;
     padding: 16px;
-    width: 90%;
 }
 
 @media screen and (max-height: 450px) {
