@@ -34,7 +34,27 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    color:white;
 }
+
+.sidenav .openbtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:white;
+}
+
+.sidenav .fixbtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:white;
+}
+
 
 #main {
     transition: margin-left .5s;
