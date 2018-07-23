@@ -36,6 +36,13 @@
     {
         parent: this.document.querySelector('main'), 
         props: {}, 
+        state: {type: 'new', status: "gone"}
+    });
+    
+    events.emit("CREATE_WPP",
+    {
+        parent: this.document.querySelector('main'), 
+        props: {}, 
         state: {
             title: "Demoliton and Excavation", 
             docNumber: "100-1234-WPP-CC-0002", 

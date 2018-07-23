@@ -14,6 +14,7 @@ class Component{
             c.parent = this.root;
             this.childComponents.push(new c.type(c));
         });
+        this.attachLocation = options.attachLocation;
         this.setProps(options.props);
         this.setState(options.state);
         this.initialize();
@@ -47,7 +48,11 @@ class Component{
     attach(){
         this.DebugLog(this.tag + ': attach component');
         if(this.parent && this.root){
-            this.parent.appendChild(this.root); 
+            if(this.attachLocation){
+                this.attachLocation.element.insertAdjacentElement(this.attachLocation.relativeLocation, this.root); 
+            } else {
+                this.parent.appendChild(this.root);
+            }
             this.attached = true;
         }
         return;
