@@ -31,7 +31,7 @@ let db = new Database(
 
 require('./passport/google-oauth-strategy.js')(passport);
 
-app.set('PORT', process.env.PORT || 8080); //http port 8080 usually, if run in some IDes they will put the requred port into process.env.PORT
+app.set('PORT', process.env.PORT || 8081); //http port 8080 usually, if run in some IDes they will put the requred port into process.env.PORT
 
 app.set('view engine', 'ejs'); //register view/templating engine
 app.engine('html', ejs.renderFile); //set render function
