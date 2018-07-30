@@ -59,14 +59,14 @@ app.use('/',express.static(path.join(process.cwd(), 'public')));
 
 //Register routers to use
 //Authenticated Routes ----- havent set up authentication yet, so this will not require authentication at this stage
-app.use('/auth', /*isLoggedIn,*/ require('./routers/authenticated-router.js')(express,passport, http));//(passport, models)); <-- we will pass variables into this route when it is requied
+app.use('/auth', /*isLoggedIn,*/ require(path.join(process.cwd(),'Server','Routers','authenticated-router.js'))(express,passport, http));//(passport, models)); <-- we will pass variables into this route when it is requied
 
 //Public routes
-app.use('/', require(path.join(process.cwd(),'server','routers','public-router.js'))); //(passport, db, models));   <-- we will pass variables into this route when it is requied
+app.use('/', require(path.join(process.cwd(),'Server','Routers','public-router.js'))); //(passport, db, models));   <-- we will pass variables into this route when it is requied
 
 //any other (*) routes not yet handled will throw an error;
 //Note this needs to be replaced with better error handling as this will only handle page request errors and not yet server errors
-app.use('/*',require(path.join(process.cwd(),'server','routers','error-router.js'))); //handle any
+app.use('/*',require(path.join(process.cwd(),'Server','Routers','error-router.js'))); //handle any
 
 let count = 0;
 //setup websocket
