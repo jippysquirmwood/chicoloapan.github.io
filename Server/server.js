@@ -68,7 +68,7 @@ app.use('/',express.static(path.join(process.cwd(), 'public')));
 
 //Register routers to use
 //Authenticated Routes ----- havent set up authentication yet, so this will not require authentication at this stage
-app.use('/auth', /*isLoggedIn,*/ require(path.join(process.cwd(),'Server','Routers','authenticated-router.js'))(express,passport, http));//(passport, models)); <-- we will pass variables into this route when it is requied
+app.use('/auth', /*isLoggedIn,*/ require(path.join(process.cwd(),'Server','Routers','authenticated-router.js'))(express,passport, http, mongoose, models));//(passport, models)); <-- we will pass variables into this route when it is requied
 
 //Public routes
 app.use('/', require(path.join(process.cwd(),'Server','Routers','public-router.js'))); //(passport, db, models));   <-- we will pass variables into this route when it is requied
