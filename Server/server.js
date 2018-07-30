@@ -1,4 +1,4 @@
-const secrets = require('dotenv').config({path: process.cwd()+'/server/.env'}); //read out secret stuff not to be shared on github
+const secrets = require('dotenv').config({path: process.cwd()+'/Server/.env'}); //read out secret stuff not to be shared on github
 const express = require('express'); //an express server
 const app = express(); //initialize server
 const logger = require('morgan'); //server request logging
