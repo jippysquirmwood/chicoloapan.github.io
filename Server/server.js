@@ -14,6 +14,9 @@ const io = require('socket.io')(httpServer);
 const passport = require('passport'); 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const favicon = require('express-favicon');
+
+app.use(favicon(path.join(process.cwd(), 'public','images','icon.jpg')));
 
 let db = new Database(
     mongoose,
