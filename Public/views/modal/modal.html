@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modal</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    
+    <!-- jquery -->
+    <script src="../text 2/librerias/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--nuevas lineas-->
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="../modal/modal.css"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript --> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+    <!-- BDP -->
+    <link href="../modal/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../modal/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!-- jquery -->
+    <script src="..//modal/modal.js"></script>
+    
+</head>
+<body>
+    <br>
+    <br>
+
+    <button type="button" id="botonModal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            +
+            </button>
+
+    
+    <!-- Modal -->
+    
+    <div class="container-fluid">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">New Work Pack Plan</h4>
+        </div>
+
+        <div class="container-fluid">
+            <div class="modal-body">
+                <p>Document details: <a href="#">link 1</a></p>
+                <p>Title of Sub : <input type="text" class="form-control" placeholder="New Draft"></p>
+                <p>Document number: N420-COT-WPP-CS-#####</p>
+                <p>Loc. of Work : <input type="text" class="form-control" placeholder="Selection"></p> 
+
+            <form action="" class="form-horizontal"  role="form">
+                <fieldset>
+                    <legend>Duration of Work</legend>
+                <div class="form-group">
+                        <label for="dtp_input2" class="col-md-2 control-label">Start</label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        
+                <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-md-2 control-label">Finished</label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        
+    <script type="text/javascript" src="../modal/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../modal/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../modal/bootstrap-datepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+        /*con esta funcion se deberia evitar que el usuario pueda escojer alguna fecha anterior pero no funciona
+        $(function () {
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var dateTime = date+' '+time;
+            $("#form_datetime").datetimepicker({
+                format: 'yyyy-mm-dd hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                startDate: dateTime
+            });
+        });*/
+    </script>
+    </script>
+          
+</body>
+</html>
