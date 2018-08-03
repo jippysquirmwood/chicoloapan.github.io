@@ -1,0 +1,58 @@
+.menu {
+    width: 2.2rem;
+    height: 2.7rem;
+    background: #4f4b52;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    transition: left 0.5s 
+}
+
+.checkbox:checked ~ .menu{
+    left: 20%;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.left-panel {
+    width: 20%;
+    height: 100%;
+    background: #4f4b52;
+    position: absolute;
+    top: 0%;
+    left: -20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left  0.4s;
+}
+
+.checkbox:checked ~ .left-panel{
+    left: 0;
+}
+
+.checkbox {
+    display: none;
+}
+
+ul a {
+    color: #7f7f7f;
+    text-decoration: none; 
+}
+
+li {
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+li:hover {
+    color: white;
+    /*border: solid white;*/
+    border-width: 0 0.1rem;
+}

@@ -10,22 +10,84 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/fonts/styles.css" />
     <script src="main.js"></script>
     <script src="../views/components/side.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">item 1</a>
-        <a href="#">item 2</a>
-        <a href="#">item 3</a>
-        <a href="#">item z</a>
-    </div>
-              
-    <span onclick="openNav()"><i class="fas fa-angle-double-right"></i></span>
-              
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-    ...hello word.
-    </div>
+    <body>
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="submenu">
+                        <input type="checkbox" class="checkbox" id= "check">
+                        <div class="btnopen">
+                        <label class="menu" for="check"><i class="fas fa-bars"></i></label>
+                        </div>
+                        <div class="left-panel">
+                            <ul class="xtest">
+                              <a href="#"><li>item 1</li></a>
+                              <a href="#"><li>item 2</li></a>
+                              <a href="#"><li>item N</li></a>
+                            </ul>
+                        </div>
+
+
+                </div>
+                <a href="#">item 1</a>
+                <a href="#">item 2</a>
+                <a href="#">item 3</a>
+                <a href="#">item z</a>                
+        </div>
+
+        <span onclick="openNav()"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+        <div id="main">
+                <h1>
+                        ...hello word.
+                </h1>   
+        </div>
+    </body>
+        </html>
+
+    <!--
+    <aside2>
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    </aside2>-->
+
+
+
+
 </body>
 </html>
+
+<!---    <aside>
+        
+
+        <div id="otherSidenav" class="otherside">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="m_body">
+            <a href="#">item 1</a>
+            <a href="#">item 2</a>
+            <a href="#">item 3</a>
+            <a href="#">item z</a>
+        </div>
+              
+        
+    </aside>
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page
+    <div id="main">
+        <body>
+                ...hello word.
+        </body>   
+    </div>-->
