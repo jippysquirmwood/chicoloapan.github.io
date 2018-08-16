@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modal</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    
+    <!-- jquery -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--nuevas lineas-->
+
+
+    <!-- Latest compiled and minified CSS -->
+    
+    <script src="../modal/css/modal.css"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript --> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+    <!-- BDP -->
+    <link href="./bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!-- jquery -->
+    <script src="modal.js"></script>
+    
+</head>
+<body>
+    <div class="row">
+            <div  class = "col-sm-2 col-md-1"></div>
+            <div  class = "col-sm-8 col-md-8">
+                <div class="col-md-2"><br></div>            
+                <div class="col-md-2">
+                <button type="button" id="botonModal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">+</button>
+                </div>
+
+    
+    <!-- Modal -->        
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 class="modal-title" id="myModalLabel">New Work Pack Plan</h1>
+        </div>
+
+        <div class="container">
+        <div class="modal-body">
+            <form>
+                <fieldset>
+                <div class="form-horizontal">
+                    <label>Document Details: </label>
+                    <a href="#"> //http:chicoloapan.org/contadordebaches</a>
+                </div>
+                <div class="form-group">
+                    <label for="Titule">Titule of Sub: </label>
+                    <input type="titule" class="form-control" id="Titule" placeholder="Enter New Title">
+                </div>
+                <div class="form-horizontal">
+                    <label>Number: </label>
+                    <a> N420-COT-WPP-CS-#####</a>
+                </div>
+                <div class="form-group">
+                    <label for="Loc">Loc. of Work: </label>
+                    <input type="loc" class="form-control" id="Loc" placeholder="Address">
+                </div>
+                </fieldset>
+                <div class="form-group">
+                    <br>
+                </div>
+                <div class="form-group">
+                    <!--<form action="" class="form-inline"  role="form"></form>-->
+                    <fieldset>
+                        <legend>Duration of Work</legend>
+                    <div class="form-group">
+                        <label for="dtp_inputA" class="control-label">Start</label>
+                        <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_inputA" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div> 
+                        <input type="hidden" id="dtp_inputA" value="" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <p class="text-center"><strong> </strong></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="dtp_inputB" class="control-label"> Finished</label>
+                        <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_inputB" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_inputB" value="" /><br/>
+                    </div>
+                    </fieldset>
+                    </form>
+                    </div>
+                    <fieldset>
+                    <div class="form-group">
+                        
+                            <legend>Document Review & Approbed</legend>
+                        <div class="form-group">    
+                        <label>Prepared by: </label>
+                        <a href="#"> //user Juanito.Perez</a>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Revised">Revised by:</label>
+                        <select class="form-control" id="Revised">
+                        <option selected>Choose...</option>
+                        <option value="1">Gumbersindo</option>
+                        <option value="2">Domitilo</option>
+                        <option value="3">Jhon</option>
+                    </select>
+                    </div>
+                    <div class="form-inline">                    
+                    <label for="discipline">Revised by:</label>
+                    </div>
+                    <div class="form-row">
+                            <div class="col-md-6">
+                    <select class="form-control" name="" id="discipline" placeholder="discipline">
+                        <option selected>Choose...</option>
+                        <option value="">Jhon</option>
+                        <option value="">Russell</option>
+                        <option value="">Ramirez</option>
+                        <option value="">Man X</option>
+                    </select>
+                            </div>
+                    </div>
+                    <div class="form-row">
+                            <div class="col-md-6">
+                    <select class="form-control" name="" id="ing" placeholder="ing">
+                        <option selected>Select Name</option>
+                        <option value="">Jhon</option>
+                        <option value="">Russell</option>
+                        <option value="">Ramirez</option>
+                        <option value="">Man X</option>
+                    </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+        </div>
+        </div>
+    </div>    
+    </div>
+
+        
+    <script type="text/javascript" src="./jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
+    </script>
+          
+</body>
+</html>
