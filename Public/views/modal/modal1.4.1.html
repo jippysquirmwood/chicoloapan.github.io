@@ -27,9 +27,19 @@
 
     <!-- jquery -->
     <script src="modal.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="../modal/js/dpjs.js" type="text/javascript"></script>
+    <link href="../modal/css/dpcss.css" rel="stylesheet" type="text/css" />
     
 </head>
 <body>
+        <div class="form-group">
+            <br>
+        </div>
+        <div class="form-group">
+            <br>
+        </div>    
     <div class="row">
             <div  class = "col-sm-2 col-md-1"></div>
             <div  class = "col-sm-8 col-md-8">
@@ -76,12 +86,12 @@
                     <!--<form action="" class="form-inline"  role="form"></form>-->
                     <fieldset>
                         <legend>Duration of Work</legend>
-                    <div class="form-group">
+<!--                    <div class="form-group">
                         <label for="dtp_inputA" class="control-label">Start</label>
                         <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_inputA" data-link-format="yyyy-mm-dd">
-                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <input class="form-control" size="16" type="text" value="" readonly>-->
                             <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+<!--                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                         </div> 
                         <input type="hidden" id="dtp_inputA" value="" /><br/>
                     </div>
@@ -91,15 +101,50 @@
                     <div class="form-group">
                         <label for="dtp_inputB" class="control-label"> Finished</label>
                         <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_inputB" data-link-format="yyyy-mm-dd">
-                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <input class="form-control" size="16" type="text" value="" readonly>-->
                             <!--<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+<!--                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                         </div>
                         <input type="hidden" id="dtp_inputB" value="" /><br/>
-                    </div>
+                    </div>-->
                     </fieldset>
-                    </form>
                     </div>
+                    
+                    <div class="form group">
+                    <div class="input-group-btn">
+                        <fieldset> 
+                            
+                            <label for="startDate" class="control-label">Start</label>
+                            <input class="form-horizontal" class="input-group-addon" id="startDate" />
+                            <label for="endDate" class="control-label">Finished</label>
+                            <input id="endDate" class="form-control"/>
+                            
+                        
+                        <script>
+                            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                            $('#startDate').datepicker({
+                                uiLibrary: 'bootstrap4',
+                                iconsLibrary: 'fontawesome',
+                                minDate: today,
+                                maxDate: function () {
+                                    return $('#endDate').val();
+                                }
+                            });
+                            $('#endDate').datepicker({
+                                uiLibrary: 'bootstrap4',
+                                iconsLibrary: 'fontawesome',
+                                minDate: function () {
+                                    return $('#startDate').val();
+                                }
+                            });
+                        </script>
+                        </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <br>
+                    </div>
+
                     <fieldset>
                     <div class="form-group">
                         
@@ -158,37 +203,6 @@
     <script type="text/javascript" src="./jquery-1.8.3.min.js" charset="UTF-8"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript">
-        $('.form_datetime').datetimepicker({
-            weekStart: 1,
-            todayBtn:  1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            forceParse: 0,
-            showMeridian: 1
-        });
-        $('.form_date').datetimepicker({
-            weekStart: 1,
-            todayBtn:  1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
-        });
-        $('.form_time').datetimepicker({
-            weekStart: 1,
-            todayBtn:  1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 1,
-            minView: 0,
-            maxView: 1,
-            forceParse: 0
-        });
-    </script>
-    </script>
-          
+
 </body>
 </html>
